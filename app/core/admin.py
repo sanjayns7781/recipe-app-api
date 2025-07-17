@@ -1,5 +1,5 @@
 from django.contrib import admin
-from core.models import User
+from core.models import User,Recipe,Tag
 from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
 from django.utils.translation import gettext_lazy as _ ## To implemet transaltions
 # Register your models here.
@@ -47,3 +47,5 @@ class UserAdmin(BaseUserAdmin):
 
 
 admin.site.register(User,UserAdmin)
+admin.site.register(Recipe)
+admin.site.register(Tag)
